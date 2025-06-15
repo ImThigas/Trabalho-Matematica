@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequências Matemáticas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Mono&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="content-wrapper">
+            <nav class="navbar">
+                <div class="navbar-links">
+                    <a href="index.html">Home</a>
+                    <a href="graficos.html">Gráficos</a>
+                    <a href="calculadora.html">Calculadora</a>
+                    <a href="sequencias.html" class="active">Sequências</a>
+                </div>
+                <label class="theme-switcher">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="theme-slider"></span>
+                </label>
+            </nav>
+            <main>
+                <header>
+                    <h1>Gerador de Sequências Matemáticas</h1>
+                    <p>Selecione o tipo de sequência e a quantidade de itens a serem gerados.</p>
+                </header>
+
+                <div class="controls">
+                    <div id="sequence-type" class="sequence-selector">
+                        <label>
+                            <input type="radio" name="sequence" value="fibonacci" checked>
+                            <span>Fibonacci</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="sequence" value="primes">
+                            <span>Primos</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="sequence" value="pi">
+                            <span>Dígitos de PI</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label for="quantity">Quantidade:</label>
+                        <input type="number" id="quantity" value="15" min="1" max="1000">
+                    </div>
+                    <button id="generate-btn" class="submit-button">Gerar</button>
+                </div>
+
+                <section id="results-container" class="results-container"></section>
+            </main>
+        </div>
+    </div>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/sequencias.js"></script>
+</body>
+</html>

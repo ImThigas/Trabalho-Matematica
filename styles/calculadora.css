@@ -1,0 +1,90 @@
+#calculator {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto 0;
+  border: 1px solid var(--border-color-light);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: var(--bg-tertiary-light);
+}
+body[data-theme="dark"] #calculator {
+  border-color: var(--border-color-dark);
+  background: var(--bg-tertiary-dark);
+}
+#display {
+  width: 100%;
+  padding: 20px;
+  font-size: 2.5em;
+  text-align: right;
+  border: none;
+  background-color: var(--bg-primary-light);
+  color: var(--content-primary-light);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+body[data-theme="dark"] #display {
+  background-color: var(--bg-primary-dark);
+  color: var(--content-primary-dark);
+}
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.keys button {
+  padding: 20px;
+  font-size: 1.5em;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--bg-secondary-light);
+  color: var(--content-primary-light);
+  transition: filter 0.2s, border-color 0.2s;
+  border: 1px solid var(--border-color-light);
+}
+body[data-theme="dark"] .keys button {
+  background-color: var(--bg-secondary-dark);
+  color: var(--content-primary-dark);
+  border-color: var(--border-color-dark);
+}
+.keys button:hover {
+  filter: brightness(0.9);
+  border-color: var(--content-brand-light);
+}
+body[data-theme="dark"] .keys button:hover {
+  border-color: var(--content-brand-dark);
+}
+.operator {
+  background-color: var(--bg-tertiary-light);
+  color: var(--content-primary-light);
+}
+body[data-theme="dark"] .operator {
+  background-color: var(--bg-tertiary-dark);
+  color: var(--content-primary-dark);
+}
+.clear {
+  background-color: #ef5350;
+  color: white;
+}
+.clear:hover {
+  filter: brightness(0.9);
+  border-color: #ef5350;
+}
+.equal {
+  grid-column: span 2;
+  background-color: var(--content-brand-light);
+  color: #fff;
+  font-weight: bold;
+}
+body[data-theme="dark"] .equal {
+  background-color: var(--content-brand-dark);
+  color: var(--bg-primary-dark);
+}
+.equal:hover {
+  filter: brightness(1.2);
+  border-color: var(--content-brand-light);
+}
+body[data-theme="dark"] .equal:hover {
+  border-color: var(--content-brand-dark);
+}

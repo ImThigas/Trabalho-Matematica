@@ -1,0 +1,102 @@
+@import url(global.css);
+@import url(layout.css);
+@import url(graficos.css);
+@import url(calculadora.css);
+@import url(sequencias.css);
+
+/* Estilos Específicos da Home Page (index.html) */
+.home-container {
+  background: var(--bg-secondary-light);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+body[data-theme="dark"] .home-container {
+  background: var(--bg-secondary-dark);
+}
+
+.home-container h1 {
+  color: var(--content-brand-light);
+  font-family: var(--ff-heading);
+}
+body[data-theme="dark"] .home-container h1 {
+  color: var(--content-brand-dark);
+}
+
+.home-nav {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.nav-card {
+  display: block;
+  background-color: var(--bg-tertiary-light);
+  padding: 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--content-primary-light);
+  border: 1px solid var(--border-color-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s;
+}
+body[data-theme="dark"] .nav-card {
+  background-color: var(--bg-tertiary-dark);
+  color: var(--content-primary-dark);
+  border-color: var(--border-color-dark);
+}
+
+.nav-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.nav-card h2,
+.nav-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--content-brand-light);
+  font-family: var(--ff-heading);
+}
+body[data-theme="dark"] .nav-card h2,
+body[data-theme="dark"] .nav-card h3 {
+  color: var(--content-brand-dark);
+}
+.nav-card p {
+  color: var(--content-secondary-light);
+}
+body[data-theme="dark"] .nav-card p {
+  color: var(--content-secondary-dark);
+}
+.extras-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--content-secondary-light);
+}
+body[data-theme="dark"] .extras-header {
+  color: var(--content-secondary-dark);
+}
+.extras-header hr {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid var(--border-color-light);
+}
+body[data-theme="dark"] .extras-header hr {
+  border-top-color: var(--border-color-dark);
+}
+.extras-header span {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.extras-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.extra-card {
+  flex: 1;
+  min-width: 250px;
+}
+.extra-card h3 {
+  font-size: 1.2rem;
+}

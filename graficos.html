@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos de Funções</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Mono&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <div class="content-wrapper">
+            <nav class="navbar">
+                <div class="navbar-links">
+                    <a href="index.html">Home</a>
+                    <a href="graficos.html" class="active">Gráficos</a>
+                    <a href="calculadora.html">Calculadora</a>
+                    <a href="sequencias.html">Sequências</a>
+                </div>
+                <label class="theme-switcher">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="theme-slider"></span>
+                </label>
+            </nav>
+            <main>
+                <header>
+                    <h1>Editor de Equações</h1>
+                    <div id="seletorTipo" class="seletor-tipo">
+                        <label><input type="radio" name="tipoEquacao" value="1" checked><span>1º Grau</span></label>
+                        <label><input type="radio" name="tipoEquacao" value="2"><span>2º Grau</span></label>
+                    </div>
+                    <p class="example-text" id="equationExample"></p>
+                </header>
+
+                <form id="equation-form">
+                    <div class="equation-editor">
+                        <span>y =</span>
+                        <div class="input-term" id="term-a">
+                            <input type="number" id="coefA" value="1" max="999" min="-999">
+                            <span>x²</span>
+                        </div>
+                        <span id="plus-a">+</span>
+                        <div class="input-term">
+                            <input type="number" id="coefB" value="2" max="999" min="-999">
+                            <span>x</span>
+                        </div>
+                        <span>+</span>
+                        <div class="input-term">
+                            <input type="number" id="coefC" value="-1" max="999" min="-999">
+                        </div>
+                    </div>
+                    <button type="button" id="btnGerarGrafico" class="submit-button">Gerar Análise</button>
+                </form>
+
+                <section class="grafico-container">
+                    <canvas id="graficoEquacao"></canvas>
+                </section>
+
+                <section class="analise-container">
+                    <h2 id="tituloAnalise"></h2>
+                    <p id="infoRaizes" class="info-raizes"></p>
+                    <table class="tabela-analise">
+                        <thead>
+                            <tr>
+                                <th>Ponto X</th>
+                                <th>Cálculo</th>
+                                <th>Ponto Y</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody id="corpoTabelaAnalise"></tbody>
+                    </table>
+                </section>
+                
+                <section id="solution-container" class="analise-container">
+                    <h3>Passo a Passo da Resolução</h3>
+                    <div id="solution-steps"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/graficos.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="content-wrapper">
+            <nav class="navbar">
+                <div class="navbar-links">
+                    <a href="index.html">Home</a>
+                    <a href="graficos.html">Gráficos</a>
+                    <a href="calculadora.html" class="active">Calculadora</a>
+                    <a href="sequencias.html">Sequências</a>
+                </div>
+                <label class="theme-switcher">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="theme-slider"></span>
+                </label>
+            </nav>
+            <main>
+                <div id="calculator">
+                    <input type="text" id="display" disabled>
+                    <div class="keys">
+                        <button onclick="appendToDisplay('Math.sin(')" class="operator">sin</button>
+                        <button onclick="appendToDisplay('Math.cos(')" class="operator">cos</button>
+                        <button onclick="appendToDisplay('Math.tan(')" class="operator">tan</button>
+                        <button onclick="appendToDisplay('**')" class="operator">xʸ</button>
+
+                        <button onclick="appendToDisplay('Math.log10(')" class="operator">log</button>
+                        <button onclick="appendToDisplay('Math.sqrt(')" class="operator">√</button>
+                        <button onclick="appendToDisplay('(')" class="operator">(</button>
+                        <button onclick="appendToDisplay(')')" class="operator">)</button>
+
+                        <button onclick="appendToDisplay('7')">7</button>
+                        <button onclick="appendToDisplay('8')">8</button>
+                        <button onclick="appendToDisplay('9')">9</button>
+                        <button onclick="clearDisplay()" class="clear">C</button>
+
+                        <button onclick="appendToDisplay('4')">4</button>
+                        <button onclick="appendToDisplay('5')">5</button>
+                        <button onclick="appendToDisplay('6')">6</button>
+                        <button onclick="appendToDisplay('*')" class="operator">×</button>
+
+                        <button onclick="appendToDisplay('1')">1</button>
+                        <button onclick="appendToDisplay('2')">2</button>
+                        <button onclick="appendToDisplay('3')">3</button>
+                        <button onclick="appendToDisplay('/')" class="operator">÷</button>
+                        
+                        <button onclick="appendToDisplay('0')">0</button>
+                        <button onclick="appendToDisplay('.')">.</button>
+                        <button onclick="calculate()" class="equal">=</button>
+                        <button onclick="appendToDisplay('+')" class="operator">+</button>
+                        <button onclick="appendToDisplay('-')" class="operator">-</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/calculadora.js"></script>
+</body>
+</html>

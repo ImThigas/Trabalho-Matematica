@@ -1,0 +1,54 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary-light: #f0f2f5;
+  --bg-secondary-light: #ffffff;
+  --bg-tertiary-light: #e8eaf6;
+  --content-primary-light: #1c2025;
+  --content-secondary-light: #555;
+  --content-brand-light: #3949ab;
+  --border-color-light: #e0e0e0;
+  --accent-root-light: #e53935;
+  
+  --bg-primary-dark: #121212;
+  --bg-secondary-dark: #1e1e1e;
+  --bg-tertiary-dark: #2a2a2a;
+  --content-primary-dark: #e0e0e0;
+  --content-secondary-dark: #a0a0a0;
+  --content-brand-dark: #bb86fc; /* Revertido para Roxo */
+  --border-color-dark: #3a3a3a;
+  --accent-root-dark: #ff8a80;
+
+  /* Fontes */
+  --ff-heading: "Sora", sans-serif;
+  --ff-body: "Roboto", sans-serif;
+  --ff-mono: "Roboto Mono", monospace;
+
+  /* Tamanhos de Fonte */
+  --fs-xl: clamp(2rem, 1.5vw + 1rem, 3rem);
+  --fs-lg: clamp(1.5rem, 1vw + 1rem, 2rem);
+  --fs-md: 1.1rem;
+  --fs-base: 1rem;
+  --fs-sm: 0.9rem;
+}
+
+body {
+  background-color: var(--bg-primary-light);
+  color: var(--content-primary-light);
+  font-family: var(--ff-body);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body[data-theme="dark"] {
+  background-color: var(--bg-primary-dark);
+  color: var(--content-primary-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

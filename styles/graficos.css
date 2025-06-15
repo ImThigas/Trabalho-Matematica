@@ -1,0 +1,245 @@
+header {
+  text-align: center;
+}
+header h1 {
+  color: var(--content-primary-light);
+  font-family: var(--ff-heading);
+  font-size: var(--fs-lg);
+}
+body[data-theme="dark"] header h1 {
+  color: var(--content-primary-dark);
+}
+.seletor-tipo {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.seletor-tipo label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  color: var(--content-secondary-light);
+  transition: color 0.3s;
+}
+body[data-theme="dark"] .seletor-tipo label {
+  color: var(--content-secondary-dark);
+}
+.seletor-tipo input[type="radio"]:checked + span {
+  color: var(--content-primary-light);
+  font-weight: bold;
+}
+body[data-theme="dark"] .seletor-tipo input[type="radio"]:checked + span {
+  color: var(--content-primary-dark);
+}
+#equation-form {
+  background: var(--bg-primary-light);
+  border-radius: 12px;
+  padding: 40px 20px;
+  margin-top: 30px;
+  border: 1px solid var(--border-color-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body[data-theme="dark"] #equation-form {
+  background: var(--bg-primary-dark);
+  border-color: var(--border-color-dark);
+}
+.equation-editor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-xl);
+  flex-wrap: wrap;
+}
+.equation-editor > span {
+  color: var(--content-secondary-light);
+}
+body[data-theme="dark"] .equation-editor > span {
+  color: var(--content-secondary-dark);
+}
+.input-term {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+.input-term span {
+  font-size: 0.7em;
+  color: var(--content-secondary-light);
+}
+body[data-theme="dark"] .input-term span {
+  color: var(--content-secondary-dark);
+}
+.equation-editor input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--border-color-light);
+  color: var(--content-primary-light);
+  font-family: var(--ff-mono);
+  font-size: 1em;
+  width: 4ch;
+  text-align: center;
+  transition: border-color 0.3s ease;
+  padding-bottom: 5px;
+}
+body[data-theme="dark"] .equation-editor input {
+  border-bottom-color: var(--border-color-dark);
+  color: var(--content-primary-dark);
+}
+.equation-editor input:focus {
+  outline: none;
+  border-color: var(--content-brand-light);
+}
+body[data-theme="dark"] .equation-editor input:focus {
+  border-color: var(--content-brand-dark);
+}
+.submit-button {
+  margin-top: 30px;
+  padding: 12px 40px;
+  background: var(--content-brand-light);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--ff-body);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1);
+}
+body[data-theme="dark"] .submit-button {
+  background: var(--content-brand-dark);
+  color: var(--bg-primary-dark);
+}
+.example-text {
+  font-size: var(--fs-sm);
+  color: var(--content-secondary-light);
+  margin-top: -10px;
+  margin-bottom: 25px;
+  font-style: italic;
+  transition: color 0.3s;
+}
+body[data-theme="dark"] .example-text {
+  color: var(--content-secondary-dark);
+}
+.example-text strong {
+  font-family: var(--ff-mono);
+  color: var(--content-primary-light);
+  font-weight: 400;
+}
+body[data-theme="dark"] .example-text strong {
+  color: var(--content-primary-dark);
+}
+.grafico-container {
+  width: 100%;
+  margin-top: 40px;
+}
+.analise-container {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color-light);
+}
+body[data-theme="dark"] .analise-container {
+  border-top-color: var(--border-color-dark);
+}
+.analise-container h2,
+.analise-container h3 {
+  text-align: center;
+  color: var(--content-primary-light);
+  margin-bottom: 20px;
+}
+body[data-theme="dark"] .analise-container h2,
+body[data-theme="dark"] .analise-container h3 {
+  color: var(--content-primary-dark);
+}
+.info-raizes {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin: 25px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--bg-tertiary-light);
+  color: var(--content-brand-light);
+}
+body[data-theme="dark"] .info-raizes {
+  background-color: var(--bg-tertiary-dark);
+  color: var(--content-brand-dark);
+}
+.tabela-analise {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+.tabela-analise thead {
+  background-color: var(--bg-tertiary-light);
+  color: var(--content-primary-light);
+  border: none;
+}
+body[data-theme="dark"] .tabela-analise thead {
+  background-color: var(--bg-tertiary-dark);
+  color: var(--content-primary-dark);
+}
+.tabela-analise th,
+.tabela-analise td {
+  padding: 12px;
+  border: 1px solid var(--border-color-light);
+  text-align: center;
+}
+body[data-theme="dark"] .tabela-analise th,
+body[data-theme="dark"] .tabela-analise td {
+  border-color: var(--border-color-dark);
+}
+.tabela-analise tbody tr:nth-child(even) {
+  background-color: var(--bg-tertiary-light);
+}
+body[data-theme="dark"] .tabela-analise tbody tr:nth-child(even) {
+  background-color: var(--bg-tertiary-dark);
+}
+.tabela-analise .root-row {
+  background-color: rgba(229, 57, 53, 0.1);
+  color: var(--accent-root-light);
+  font-weight: bold;
+}
+body[data-theme="dark"] .tabela-analise .root-row {
+  color: var(--accent-root-dark);
+}
+.tabela-analise td:nth-child(2) {
+  font-family: var(--ff-mono);
+  font-size: 0.9em;
+  word-break: break-all;
+}
+#solution-steps {
+  background-color: var(--bg-primary-light);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color-light);
+  font-family: var(--ff-mono);
+  line-height: 2;
+}
+body[data-theme="dark"] #solution-steps {
+  background-color: var(--bg-primary-dark);
+  border-color: var(--border-color-dark);
+}
+#solution-steps p {
+  margin-bottom: 1rem;
+}
+#solution-steps strong {
+  color: var(--content-brand-light);
+}
+body[data-theme="dark"] #solution-steps strong {
+  color: var(--content-brand-dark);
+}
+.hidden {
+  display: none;
+}
